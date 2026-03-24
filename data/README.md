@@ -15,6 +15,7 @@ into the 24 paired AKI / no-AKI analysis datasets used in
 | `01_build_aki_cohort.py` | Builds `<drug>_aki_mean/t0t1.parquet.gzip` for all 11 drugs |
 | `02_build_noaki_cohort.py` | Builds `<drug>_noaki_mean/t0t1.parquet.gzip` for all 11 drugs |
 | `03_merge_datasets.py` | Merges pairs into 24 × 2 final datasets |
+| `atc_codes.csv` | ATC codes and drug names for the mapping of drugs with ATC |
 
 ---
 
