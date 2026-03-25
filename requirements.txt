@@ -1,0 +1,47 @@
+# =============================================================================
+# DAKI Causal ML — Python dependencies
+# Dimitsaki et al. (2026) — CLeaR Conference
+# =============================================================================
+# Tested on Python 3.10 / 3.11.
+# Install with:  pip install -r requirements.txt
+# =============================================================================
+
+# ── Core scientific stack ─────────────────────────────────────────────────────
+numpy>=1.26.0,<2.0         # Array operations; pin < 2.0 for EconML compatibility
+pandas>=2.0.0              # DataFrames, Excel I/O, Parquet
+scipy>=1.11.0              # Kruskal-Wallis, Mahalanobis distance, cdist
+
+# ── Machine learning ──────────────────────────────────────────────────────────
+scikit-learn>=1.3.0        # All classifiers, regressors, StandardScaler, KFold
+xgboost>=2.0.0             # XGBClassifier, XGBRegressor
+joblib>=1.3.0              # Parallel, delayed (model selection parallelism)
+
+# ── Causal machine learning ───────────────────────────────────────────────────
+econml>=0.15.0             # SLearner, TLearner, XLearner, DML (bootstrap inference)
+
+# ── Data preprocessing ────────────────────────────────────────────────────────
+fuzzywuzzy>=0.18.0         # Fuzzy ATC code matching (Algorithm 2)
+python-Levenshtein>=0.21.0 # C-speed backend for fuzzywuzzy (strongly recommended)
+
+# ── Visualisation ─────────────────────────────────────────────────────────────
+plotly>=5.18.0             # Interactive boxplot panels (ITE interpretability)
+kaleido==0.2.1             # Static PDF/PNG export for Plotly figures
+matplotlib>=3.7.0          # Love plots (matching/psm.py)
+
+# ── Excel I/O ─────────────────────────────────────────────────────────────────
+openpyxl>=3.1.0            # pd.ExcelWriter engine for all result workbooks
+
+# ── Parquet I/O ───────────────────────────────────────────────────────────────
+pyarrow>=14.0.0            # pandas .read_parquet / .to_parquet (gzip compression)
+
+# =============================================================================
+# Optional / environment-specific
+# =============================================================================
+
+# Uncomment if running in a GPU environment:
+# torch>=2.0.0             # Not required by any pipeline script in this repo
+#                            but was used in some exploratory notebook cells.
+
+# Uncomment to reproduce the R-based matching comparison from the paper:
+# rpy2>=3.5.0              # Python–R bridge (MatchingBenchmark.ipynb only;
+#                            not needed for any .py pipeline file)
