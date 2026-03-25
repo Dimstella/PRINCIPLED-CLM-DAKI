@@ -81,7 +81,6 @@ daki-causal-ml/
     └── README.md
 ```
 
-**Total: ~5,900 lines of Python** replacing 20+ Jupyter notebooks with ~1,500+ cells.
 
 ---
 
